@@ -2629,12 +2629,20 @@ button, input, select, textarea {
         font-size: 0.9rem !important;
     }
 
-    /* Hero Section Mobile (100% Full & Crystal-Clear Video Visibility) */
+    /* Hero Section Mobile (Matching rkhospitality.in Framed Banner Layout) */
     .hero-section {
-        min-height: 80vh !important;
-        max-height: 90vh !important;
-        padding-top: calc(var(--header-height) + 1.25rem) !important;
-        padding-bottom: 2.5rem !important;
+        position: relative !important;
+        min-height: 380px !important;
+        height: 55vh !important;
+        max-height: 480px !important;
+        margin-top: var(--header-height) !important;
+        padding: 2rem 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+        border-bottom: 3px solid #ffb300 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
     }
 
     .hero-video-wrapper {
@@ -2654,7 +2662,7 @@ button, input, select, textarea {
         object-fit: cover !important;
         object-position: center center !important;
         transform: translate(-50%, -50%) scale(1.0) !important;
-        filter: brightness(1.22) contrast(1.1) saturate(1.2) !important;
+        filter: brightness(1.05) contrast(1.1) !important;
         opacity: 1 !important;
     }
 
@@ -2662,44 +2670,74 @@ button, input, select, textarea {
         position: absolute !important;
         inset: 0 !important;
         background: linear-gradient(180deg, 
-            rgba(5, 2, 12, 0.25) 0%, 
-            rgba(5, 2, 12, 0.08) 50%, 
-            rgba(5, 2, 12, 0.45) 100%
+            rgba(5, 2, 12, 0.70) 0%, 
+            rgba(5, 2, 12, 0.45) 50%, 
+            rgba(5, 2, 12, 0.80) 100%
         ) !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
         z-index: 2 !important;
     }
 
-    .hero-title {
-        font-size: 1.85rem !important;
-        line-height: 1.25 !important;
+    .hero-content {
+        position: relative !important;
+        z-index: 5 !important;
+        padding: 0 0.5rem !important;
+        text-align: center !important;
         max-width: 100% !important;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .hero-tagline-accent {
+        color: #ffb300 !important;
+        font-family: var(--font-heading) !important;
+        font-size: 0.75rem !important;
+        font-weight: 800 !important;
+        letter-spacing: 1.5px !important;
+        text-transform: uppercase !important;
+        margin-bottom: 0.5rem !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .hero-title {
+        font-size: 2.1rem !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+        color: #ffb300 !important; /* Golden title matching reference */
+        margin-bottom: 0.4rem !important;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 0 25px rgba(255, 179, 0, 0.3) !important;
+    }
+
+    .hero-title-divider {
+        width: 70px !important;
+        height: 3px !important;
+        background: #ffb300 !important;
+        margin: 0.5rem auto 0.75rem auto !important;
+        border-radius: 2px !important;
+        box-shadow: 0 0 10px rgba(255, 179, 0, 0.8) !important;
     }
 
     .hero-subtitle {
-        font-size: 0.88rem !important;
-        line-height: 1.5 !important;
-        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95) !important;
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1.25rem !important;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95) !important;
     }
 
-    .hero-cta-group {
-        flex-direction: column;
-        width: 100%;
-        max-width: 100%;
-        gap: 0.85rem;
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 0.75rem !important;
     }
 
-    .hero-cta-group .btn,
-    .btn {
-        width: 100% !important;
-        max-width: 100% !important;
-        white-space: normal !important;
-        text-align: center !important;
-        font-size: 0.88rem !important;
-        padding: 0.85rem 1rem !important;
-        box-sizing: border-box !important;
+    .hero-buttons .btn {
+        width: auto !important;
+        font-size: 0.78rem !important;
+        padding: 0.55rem 1.1rem !important;
+        border-radius: 50px !important;
+        white-space: nowrap !important;
     }
 
     .hero-badges-row {
