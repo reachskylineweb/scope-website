@@ -182,4 +182,45 @@ function initScrollAnimations() {
             end: 'bottom 15%'
         });
     }
+
+    // 3D Animated Caduceus Emblem Scroll Formation & Reverse Dissolve
+    const caduceusStage = document.getElementById('caduceus-stage');
+    const caduceusEmblem = document.getElementById('caduceus-emblem');
+    const guestSection = document.getElementById('guest-doctors');
+
+    if (caduceusStage && guestSection) {
+        ScrollTrigger.create({
+            trigger: guestSection,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            onEnter: () => caduceusStage.classList.add('active'),
+            onLeave: () => caduceusStage.classList.remove('active'),
+            onEnterBack: () => caduceusStage.classList.add('active'),
+            onLeaveBack: () => caduceusStage.classList.remove('active')
+        });
+
+        // Dynamic 3D Parallax Tilt Effect on Cursor Movement
+        guestSection.addEventListener('mousemove', (e) => {
+            if (!caduceusEmblem) return;
+            const rect = guestSection.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            gsap.to(caduceusEmblem, {
+                rotateY: x * 30,
+                rotateX: -y * 25,
+                duration: 0.6,
+                ease: 'power1.out'
+            });
+        });
+
+        guestSection.addEventListener('mouseleave', () => {
+            if (!caduceusEmblem) return;
+            gsap.to(caduceusEmblem, {
+                rotateY: 0,
+                rotateX: 0,
+                duration: 0.8,
+                ease: 'power2.out'
+            });
+        });
+    }
 }
