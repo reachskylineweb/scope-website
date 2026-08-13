@@ -5,14 +5,14 @@
 
 // 1. GLOBAL EVENT CONFIGURATION (Easy to Edit)
 const EVENT_CONFIG = {
-    hospitalName: "Apollo Premier Institute of Gastroenterology",
+    hospitalName: "Premier Institute of Gastroenterology",
     eventName: "National Endoscopy Conference 2026",
     eventDate: "October 14 - 16, 2026",
-    venue: "Grand Convention Center & Advanced Endoscopy Suite, Apollo Hospital Campus",
+    venue: "Grand Convention Center & Advanced Endoscopy Suite, Premier Hospital Campus",
     phone: "+91 98765 43210",
     whatsapp: "+91 98765 43210",
     email: "secretariat@endoscopy2026.org",
-    address: "Apollo Premier Hospital, Healthcare Boulevard, City Center"
+    address: "Premier Medical Center, Healthcare Boulevard, City Center"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
