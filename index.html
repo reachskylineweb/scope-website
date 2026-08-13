@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=12">
+    <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -72,13 +72,9 @@
     <section class="hero-section">
         <!-- Background Video Wrapper -->
         <div class="hero-video-wrapper">
-            <iframe 
-                src="https://player.cloudinary.com/embed/?cloud_name=dlttxqrod&public_id=Make_image_into_3D_video_202608131202_sqnnwn&autoplay=true&loop=true&muted=true&controls=false&hide_controls=true&player[controls]=false&player[showJumpControls]=false&player[bigPlayButton]=false&click_to_play=false" 
-                class="hero-bg-video"
-                allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
-                frameborder="0"
-                title="Endoscopy 3D Background Video">
-            </iframe>
+            <video autoplay loop muted playsinline webkit-playsinline disablepictureinpicture disableremoteplayback class="hero-bg-video" preload="auto">
+                <source src="https://res.cloudinary.com/dlttxqrod/video/upload/Make_image_into_3D_video_202608131202_sqnnwn.mp4" type="video/mp4">
+            </video>
             <div class="hero-video-overlay"></div>
         </div>
 
