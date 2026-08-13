@@ -537,7 +537,9 @@ button, input, select, textarea {
     height: 100%;
     overflow: hidden;
     z-index: 1;
-    pointer-events: none;
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
 }
 
 .hero-bg-video {
@@ -550,21 +552,38 @@ button, input, select, textarea {
     min-width: 177.77vh; /* 16:9 min width */
     transform: translate(-50%, -50%) scale(1.18);
     border: none;
-    pointer-events: none;
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
 }
 
-/* Clear Overlay to let 3D Video Shine Through Vividly */
+/* Clear Overlay Shield to Prevent Any Touch Events from Triggering Video Controls */
 .hero-video-overlay {
-    position: absolute;
-    inset: 0;
+    position: absolute !important;
+    inset: 0 !important;
     background: linear-gradient(180deg, 
         rgba(3, 10, 20, 0.35) 0%, 
         rgba(5, 13, 24, 0.10) 40%, 
         rgba(5, 13, 24, 0.65) 100%
-    );
+    ) !important;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    z-index: 2;
+    z-index: 5 !important;
+    pointer-events: auto !important;
+}
+
+/* Hide Any Video Control Overlays Globally */
+.vjs-big-play-button,
+.cld-video-player .vjs-big-play-button,
+.vjs-control-bar,
+.vjs-text-track-display,
+.vjs-modal-dialog,
+.vjs-button {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 
 #webgl-canvas {
