@@ -133,93 +133,31 @@ function initScrollAnimations() {
     // 3D Sequential Card Flip-Open / Flip-Close Scroll Animation for Guest Doctor Cards
     const flipCards = document.querySelectorAll('[data-gsap="flip-card"]');
     if (flipCards.length) {
-        gsap.set(flipCards, {
-            rotateY: -90,
-            opacity: 0,
-            scale: 0.9,
-            transformPerspective: 1000,
-            transformOrigin: 'left center'
-        });
-
-        ScrollTrigger.batch(flipCards, {
-            onEnter: batch => gsap.to(batch, {
-                rotateY: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.75,
-                stagger: 0.12,
-                ease: 'back.out(1.4)',
-                overwrite: 'auto'
-            }),
-            onLeave: batch => gsap.to(batch, {
-                rotateY: 90,
-                opacity: 0,
-                scale: 0.9,
-                duration: 0.45,
-                stagger: 0.08,
-                ease: 'power2.in',
-                overwrite: 'auto'
-            }),
-            onEnterBack: batch => gsap.to(batch, {
-                rotateY: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.75,
-                stagger: 0.12,
-                ease: 'back.out(1.4)',
-                overwrite: 'auto'
-            }),
-            onLeaveBack: batch => gsap.to(batch, {
+        flipCards.forEach((card, index) => {
+            // Set initial 3D folded / closed state
+            gsap.set(card, {
                 rotateY: -90,
                 opacity: 0,
-                scale: 0.9,
-                duration: 0.45,
-                stagger: 0.08,
-                ease: 'power2.in',
-                overwrite: 'auto'
-            }),
-            start: 'top 85%',
-            end: 'bottom 15%'
-        });
-    }
-
-    // 3D Animated Caduceus Emblem Scroll Formation & Reverse Dissolve
-    const caduceusStage = document.getElementById('caduceus-stage');
-    const caduceusEmblem = document.getElementById('caduceus-emblem');
-    const guestSection = document.getElementById('guest-doctors');
-
-    if (caduceusStage && guestSection) {
-        ScrollTrigger.create({
-            trigger: guestSection,
-            start: 'top 80%',
-            end: 'bottom 20%',
-            onEnter: () => caduceusStage.classList.add('active'),
-            onLeave: () => caduceusStage.classList.remove('active'),
-            onEnterBack: () => caduceusStage.classList.add('active'),
-            onLeaveBack: () => caduceusStage.classList.remove('active')
-        });
-
-        // Dynamic 3D Parallax Tilt Effect on Cursor Movement
-        guestSection.addEventListener('mousemove', (e) => {
-            if (!caduceusEmblem) return;
-            const rect = guestSection.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width - 0.5;
-            const y = (e.clientY - rect.top) / rect.height - 0.5;
-            gsap.to(caduceusEmblem, {
-                rotateY: x * 30,
-                rotateX: -y * 25,
-                duration: 0.6,
-                ease: 'power1.out'
+                scale: 0.85,
+                transformPerspective: 1200,
+                transformOrigin: 'left center'
             });
-        });
 
-        guestSection.addEventListener('mouseleave', () => {
-            if (!caduceusEmblem) return;
-            gsap.to(caduceusEmblem, {
+            gsap.to(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    end: 'bottom 10%',
+                    toggleActions: 'play reverse play reverse', // Smooth flip-open on scroll into view & flip-close on scroll away
+                    invalidateOnRefresh: true
+                },
                 rotateY: 0,
-                rotateX: 0,
-                duration: 0.8,
-                ease: 'power2.out'
+                opacity: 1,
+                scale: 1,
+                duration: 0.85,
+                delay: (index % 3) * 0.12,
+                ease: 'back.out(1.5)',
+                overwrite: 'auto'
             });
         });
     }
