@@ -130,23 +130,72 @@ function initScrollAnimations() {
         });
     }
 
-    // Smooth 3D Entrance Animation for Guest Doctor Cards (Never hide cards permanently)
+    // 3D Sequential Card Flip-Open (Scroll In) & Flip-Close (Scroll Out) - One By One
+    const guestCardsGrid = document.querySelector('.guest-3d-cards-grid');
     const flipCards = document.querySelectorAll('[data-gsap="flip-card"]');
-    if (flipCards.length) {
-        gsap.utils.toArray(flipCards).forEach((card, index) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 92%',
-                    toggleActions: 'play none none none'
-                },
-                opacity: 0,
-                y: 40,
-                rotateX: 12,
-                duration: 0.8,
-                delay: (index % 3) * 0.1,
-                ease: 'power3.out'
-            });
+
+    if (guestCardsGrid && flipCards.length && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        // Initial 3D folded shut state
+        gsap.set(flipCards, {
+            rotateY: -90,
+            opacity: 0,
+            scale: 0.85,
+            transformPerspective: 1200,
+            transformOrigin: 'left center'
+        });
+
+        ScrollTrigger.create({
+            trigger: guestCardsGrid,
+            start: 'top 75%',
+            end: 'bottom 20%',
+            onEnter: () => {
+                // Flip open ONE BY ONE sequentially
+                gsap.to(flipCards, {
+                    rotateY: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.75,
+                    stagger: 0.18, // 1-by-1 sequential open delay
+                    ease: 'back.out(1.4)',
+                    overwrite: 'auto'
+                });
+            },
+            onLeave: () => {
+                // Flip close ONE BY ONE sequentially
+                gsap.to(flipCards, {
+                    rotateY: 90,
+                    opacity: 0,
+                    scale: 0.85,
+                    duration: 0.5,
+                    stagger: 0.12, // 1-by-1 sequential close
+                    ease: 'power2.in',
+                    overwrite: 'auto'
+                });
+            },
+            onEnterBack: () => {
+                // Flip open ONE BY ONE sequentially when scrolling back up
+                gsap.to(flipCards, {
+                    rotateY: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.75,
+                    stagger: 0.18,
+                    ease: 'back.out(1.4)',
+                    overwrite: 'auto'
+                });
+            },
+            onLeaveBack: () => {
+                // Flip close ONE BY ONE sequentially when scrolling up past
+                gsap.to(flipCards, {
+                    rotateY: -90,
+                    opacity: 0,
+                    scale: 0.85,
+                    duration: 0.5,
+                    stagger: 0.12,
+                    ease: 'power2.in',
+                    overwrite: 'auto'
+                });
+            }
         });
     }
 }

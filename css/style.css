@@ -149,21 +149,10 @@ button, input, select, textarea {
     margin: 0 auto 4rem auto;
 }
 
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: rgba(0, 210, 255, 0.1);
-    color: var(--secondary);
-    border: 1px solid rgba(0, 210, 255, 0.25);
-    backdrop-filter: blur(8px);
-    margin-bottom: 1.2rem;
+/* Badges - Completely Removed Site-Wide */
+.badge,
+.badge-pulse {
+    display: none !important;
 }
 
 .badge-pulse::before {
@@ -640,19 +629,30 @@ button, input, select, textarea {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
 
-/* Event Quick Meta Card (Fully Transparent & Centered) */
+/* Event Meta Strip Section (Positioned Next To / Below Hero Section) */
+.event-meta-strip-section {
+    position: relative;
+    z-index: 10;
+    padding: 2rem 0;
+    background: rgba(10, 4, 20, 0.98);
+    border-top: 1px solid rgba(255, 179, 0, 0.3);
+    border-bottom: 1px solid rgba(142, 36, 170, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
 .event-meta-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    padding: 0.5rem 0;
-    margin: 0 auto 2.5rem auto;
-    max-width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    background: rgba(20, 9, 36, 0.8);
+    border: 1px solid rgba(255, 179, 0, 0.35);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(142, 36, 170, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+    max-width: 1100px;
 }
 
 .meta-item {
@@ -2581,8 +2581,19 @@ button, input, select, textarea {
         z-index: 10000;
     }
 
+    .header-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+
     .header-actions .btn-primary {
-        display: none;
+        display: inline-flex !important;
+        width: auto !important;
+        font-size: 0.72rem !important;
+        padding: 0.45rem 0.85rem !important;
+        border-radius: 50px !important;
+        white-space: nowrap !important;
     }
 
     /* Global Mobile Typography & Word Wrapping */
@@ -2645,17 +2656,31 @@ button, input, select, textarea {
         gap: 0.75rem;
     }
 
-    /* Event Meta Card Mobile */
+    /* Event Meta Card Mobile (Horizontal Scrollable Layout) */
     .event-meta-card {
-        grid-template-columns: 1fr !important;
-        gap: 1.25rem !important;
-        padding: 1.25rem 1rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 1rem !important;
+        padding: 1rem 0.85rem !important;
         width: 100% !important;
+        box-sizing: border-box !important;
+        scrollbar-width: none !important;
     }
 
-    .event-meta-item {
-        align-items: flex-start !important;
-        text-align: left !important;
+    .event-meta-card::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .event-meta-card .meta-item {
+        flex: 0 0 auto !important;
+        min-width: 230px !important;
+        background: rgba(142, 36, 170, 0.18) !important;
+        border: 1px solid rgba(255, 179, 0, 0.3) !important;
+        padding: 0.85rem 1rem !important;
+        border-radius: 12px !important;
+        align-items: center !important;
     }
 
     /* Tech & Intro Section Cards Mobile */
