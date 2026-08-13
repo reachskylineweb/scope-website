@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
@@ -21,12 +21,7 @@
     <div id="ecg-loader">
         <div class="loader-content">
             <div class="loader-logo">
-                <div class="loader-logo-icon">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
-                        <path d="M19 10.5V6.75C19 4.127 16.873 2 14.25 2H9.75C7.127 2 5 4.127 5 6.75V17.25C5 19.873 7.127 22 9.75 22H14.25C16.873 22 19 19.873 19 17.25V13.5M12 7V17M7 12H17" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="loader-logo-text">PREMIER INSTITUTE</div>
+                <img src="images/scope_logo.jpg" alt="SCOPE 2026 Logo" class="loader-logo-img" style="max-height: 55px; width: auto; filter: drop-shadow(0 4px 15px rgba(255, 179, 0, 0.5));">
             </div>
             <div class="loader-event-title" data-config="eventName">NATIONAL ENDOSCOPY CONFERENCE 2026</div>
             
@@ -501,9 +496,14 @@
         </div>
     </section>
 
-    <!-- 8. EVENT SCHEDULE TIMELINE -->
-    <section class="section section-surface">
-        <div class="container">
+    <!-- 8. EVENT SCHEDULE TIMELINE WITH 3D KINETIC BACKGROUND -->
+    <section id="schedule-section" class="section section-surface schedule-section-3d">
+        <!-- 3D Kinetic Perspective Grid & Floating Bio Orbs -->
+        <div class="schedule-3d-bg-grid"></div>
+        <div class="schedule-orb-1"></div>
+        <div class="schedule-orb-2"></div>
+
+        <div class="container" style="position: relative; z-index: 3;">
             <div class="section-header" data-gsap="fade-up">
                 <div class="badge">PROGRAMME AGENDA</div>
                 <h2 class="section-title">Event Schedule</h2>
@@ -756,7 +756,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- CUSTOM JS SCRIPTS -->
-    <script src="js/main.js?v=6"></script>
+    <script src="js/main.js?v=7"></script>
     <script src="js/loader.js"></script>
     <script src="js/three-scene.js"></script>
     <script src="js/animations.js"></script>

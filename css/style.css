@@ -236,16 +236,20 @@ button, input, select, textarea {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #0b6bcb 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #8e24aa 0%, #ab47bc 50%, #7b1fa2 100%);
     color: #ffffff;
-    box-shadow: 0 8px 24px var(--primary-glow);
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 179, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(142, 36, 170, 0.6), 0 0 15px rgba(255, 179, 0, 0.3);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 242, 254, 0.5);
-    background: linear-gradient(135deg, #0958a8 0%, #00d2ff 100%);
+    background: linear-gradient(135deg, #ffb300 0%, #ff8f00 100%);
+    color: #0a0414;
+    border-color: #ffffff;
+    box-shadow: 0 12px 32px rgba(255, 179, 0, 0.7);
+    text-shadow: none;
 }
 
 .btn-secondary {
@@ -279,7 +283,7 @@ button, input, select, textarea {
     position: fixed;
     inset: 0;
     z-index: 99999;
-    background-color: #030811;
+    background-color: #0a0414;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,7 +308,15 @@ button, input, select, textarea {
 .loader-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.loader-logo-img {
+    max-height: 55px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 20px rgba(255, 179, 0, 0.6));
 }
 
 .loader-logo-icon {
@@ -443,17 +455,18 @@ button, input, select, textarea {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3.25rem;
 }
 
 .nav-link {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 1.02rem;
+    font-weight: 600;
     color: var(--text-secondary);
     position: relative;
     padding: 0.5rem 0;
     transition: color var(--transition-fast);
+    letter-spacing: 0.3px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -1264,11 +1277,72 @@ button, input, select, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   10. EVENT SCHEDULE TIMELINE
+   10. EVENT SCHEDULE TIMELINE WITH 3D KINETIC BACKGROUND
    -------------------------------------------------------------------------- */
+.schedule-section-3d {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 30%, rgba(142, 36, 170, 0.30) 0%, rgba(10, 4, 20, 0.96) 75%);
+}
+
+.schedule-3d-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 179, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 179, 0, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: perspective(600px) rotateX(45deg) scale(2);
+    transform-origin: center top;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: grid3dMove 18s linear infinite;
+}
+
+@keyframes grid3dMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 60px; }
+}
+
+.schedule-orb-1 {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(142, 36, 170, 0.40) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    animation: orbFloat1 9s ease-in-out infinite alternate;
+}
+
+.schedule-orb-2 {
+    position: absolute;
+    bottom: 12%;
+    right: 8%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 179, 0, 0.30) 0%, transparent 70%);
+    filter: blur(70px);
+    pointer-events: none;
+    animation: orbFloat2 11s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloat1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, -45px) scale(1.2); }
+}
+
+@keyframes orbFloat2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-45px, 40px) scale(1.25); }
+}
+
 .schedule-container {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 3;
 }
 
 .timeline {
@@ -1282,8 +1356,9 @@ button, input, select, textarea {
     top: 0;
     bottom: 0;
     left: 7px;
-    width: 2px;
-    background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+    width: 3px;
+    background: linear-gradient(180deg, #8e24aa 0%, #ffb300 50%, #ff5252 100%);
+    box-shadow: 0 0 15px rgba(255, 179, 0, 0.6);
 }
 
 .timeline-item {
@@ -1295,21 +1370,35 @@ button, input, select, textarea {
     content: '';
     position: absolute;
     top: 0.25rem;
-    left: -2rem;
-    width: 16px;
-    height: 16px;
+    left: -2.05rem;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    background-color: var(--bg-dark);
-    border: 3px solid var(--secondary);
-    box-shadow: 0 0 10px var(--secondary);
+    background-color: #0a0414;
+    border: 3px solid #ffb300;
+    box-shadow: 0 0 15px #ffb300;
     z-index: 2;
 }
 
 .timeline-card {
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    background: rgba(20, 9, 36, 0.88) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 179, 0, 0.3) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(142, 36, 170, 0.25) !important;
+    transform: perspective(1000px) rotateY(-2deg) translateZ(10px);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.timeline-card:hover {
+    transform: perspective(1000px) rotateY(0deg) translateY(-6px) translateZ(20px) !important;
+    border-color: #ffb300 !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 179, 0, 0.45) !important;
 }
 
 .timeline-time {
@@ -2729,13 +2818,44 @@ button, input, select, textarea {
         pointer-events: none !important;
     }
 
-    /* Stethoscope Background Fit on Mobile */
+    /* Video Touch Barrier - Prevents Play/Pause/Resume Buttons from ever showing */
+    .hero-video-wrapper iframe,
+    .cards-video-bg-wrapper iframe,
+    .hero-bg-video,
+    .cards-bg-video {
+        pointer-events: none !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+    }
+
+    .hero-video-overlay,
+    .cards-video-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 10 !important;
+        pointer-events: auto !important;
+        background: transparent !important;
+    }
+
+    /* Stethoscope Background Full Coverage */
+    .highlights-stetho-bg-wrapper {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        z-index: 1 !important;
+    }
+
     .highlights-stetho-img {
         width: 100% !important;
         height: 100% !important;
+        min-width: 100vw !important;
+        min-height: 100% !important;
         object-fit: cover !important;
         object-position: center center !important;
-        transform: scale(1.1) !important;
+        transform: scale(1.05) !important;
+        opacity: 0.85 !important;
     }
 
     /* Future of Endoscopy Section Mobile Grid */
