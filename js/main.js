@@ -184,11 +184,17 @@ function initGalleryLightbox() {
         const currentItem = visibleItems[currentIndex];
         const title = currentItem.querySelector('.gallery-title')?.textContent || 'Event Photo';
         const category = currentItem.querySelector('.gallery-category')?.textContent || 'Gallery';
-        const svgContent = currentItem.querySelector('.svg-thumb')?.outerHTML || '';
+        const img = currentItem.querySelector('.gallery-img');
+        const svgContent = currentItem.querySelector('.svg-thumb')?.outerHTML;
 
         lightboxTitle.textContent = title;
         lightboxCategory.textContent = category;
-        lightboxImgWrapper.innerHTML = svgContent;
+
+        if (img) {
+            lightboxImgWrapper.innerHTML = `<img src="${img.src}" alt="${title}" class="lightbox-img" style="max-width: 90vw; max-height: 80vh; border-radius: 12px; border: 1px solid rgba(255,179,0,0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.8); object-fit: contain;">`;
+        } else if (svgContent) {
+            lightboxImgWrapper.innerHTML = svgContent;
+        }
     }
 
     function prevImage() {
