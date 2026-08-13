@@ -130,34 +130,22 @@ function initScrollAnimations() {
         });
     }
 
-    // 3D Sequential Card Flip-Open / Flip-Close Scroll Animation for Guest Doctor Cards
+    // Smooth 3D Entrance Animation for Guest Doctor Cards (Never hide cards permanently)
     const flipCards = document.querySelectorAll('[data-gsap="flip-card"]');
     if (flipCards.length) {
-        flipCards.forEach((card, index) => {
-            // Set initial 3D folded / closed state
-            gsap.set(card, {
-                rotateY: -90,
-                opacity: 0,
-                scale: 0.85,
-                transformPerspective: 1200,
-                transformOrigin: 'left center'
-            });
-
-            gsap.to(card, {
+        gsap.utils.toArray(flipCards).forEach((card, index) => {
+            gsap.from(card, {
                 scrollTrigger: {
                     trigger: card,
-                    start: 'top 88%',
-                    end: 'bottom 10%',
-                    toggleActions: 'play reverse play reverse', // Smooth flip-open on scroll into view & flip-close on scroll away
-                    invalidateOnRefresh: true
+                    start: 'top 92%',
+                    toggleActions: 'play none none none'
                 },
-                rotateY: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.85,
-                delay: (index % 3) * 0.12,
-                ease: 'back.out(1.5)',
-                overwrite: 'auto'
+                opacity: 0,
+                y: 40,
+                rotateX: 12,
+                duration: 0.8,
+                delay: (index % 3) * 0.1,
+                ease: 'power3.out'
             });
         });
     }

@@ -436,19 +436,37 @@ button, input, select, textarea {
     text-decoration: none;
 }
 
+.brand-logo-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 10px;
+    background: rgba(142, 36, 170, 0.18);
+    border: 1px solid rgba(255, 179, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(10, 4, 20, 0.6);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.brand-logo-badge:hover {
+    background: rgba(142, 36, 170, 0.3);
+    border-color: #ffb300;
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+}
+
 .brand-logo-img {
-    height: 44px;
+    height: 38px;
     width: auto;
-    max-height: 44px;
+    max-height: 38px;
     object-fit: contain;
-    filter: drop-shadow(0 4px 14px rgba(142, 36, 170, 0.6));
+    border-radius: 4px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
     transition: transform var(--transition-fast);
 }
 
 .brand-logo-img:hover {
     transform: scale(1.04);
-}
-    text-transform: uppercase;
 }
 
 /* Nav Menu */
