@@ -2302,118 +2302,18 @@ button, input, select, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   3D SCROLL-ANIMATED CADUCEUS EMBLEM BACKGROUND (GUEST DOCTORS SECTION)
+   GUEST DOCTORS SECTION CONTAINER
    -------------------------------------------------------------------------- */
 .guest-cards-video-container {
     position: relative;
-    padding: 4rem 2rem;
+    padding: 3.5rem 2rem;
     border-radius: var(--border-radius-lg);
-    background: rgba(15, 7, 30, 0.85);
+    background: rgba(20, 9, 36, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 179, 0, 0.3);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(142, 36, 170, 0.25);
     overflow: hidden;
-}
-
-.guest-3d-caduceus-stage {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.caduceus-glow-orb {
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, rgba(142, 36, 170, 0.50) 0%, rgba(255, 179, 0, 0.22) 45%, transparent 70%);
-    filter: blur(55px);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.caduceus-energy-ring {
-    position: absolute;
-    border-radius: 50%;
-    border: 1.5px dashed rgba(255, 179, 0, 0.35);
-    opacity: 0;
-    transform: scale(0.4) rotate(0deg);
-    transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease;
-}
-
-.caduceus-energy-ring.ring-1 {
-    width: 340px;
-    height: 340px;
-    border-color: rgba(255, 179, 0, 0.45);
-    animation: ringRotate 20s linear infinite;
-}
-
-.caduceus-energy-ring.ring-2 {
-    width: 500px;
-    height: 500px;
-    border-color: rgba(142, 36, 170, 0.55);
-    animation: ringRotateReverse 25s linear infinite;
-}
-
-@keyframes ringRotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes ringRotateReverse {
-    0% { transform: rotate(360deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.caduceus-emblem-wrapper {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    opacity: 0;
-    transform: perspective(1000px) scale(0.3) rotateY(65deg) rotateX(25deg) translateY(80px);
-    transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease;
-}
-
-.caduceus-img {
-    height: 380px;
-    width: auto;
-    max-height: 80%;
-    object-fit: contain;
-    filter: invert(1) hue-rotate(240deg) brightness(1.6) drop-shadow(0 0 25px rgba(255, 179, 0, 0.85)) drop-shadow(0 0 50px rgba(142, 36, 170, 0.75));
-    user-select: none;
-    pointer-events: none;
-}
-
-/* Active Formed State when scrolled into view */
-.guest-3d-caduceus-stage.active .caduceus-glow-orb {
-    opacity: 1;
-}
-
-.guest-3d-caduceus-stage.active .caduceus-energy-ring {
-    opacity: 0.85;
-}
-
-.guest-3d-caduceus-stage.active .caduceus-energy-ring.ring-1 {
-    transform: scale(1) rotate(0deg);
-}
-
-.guest-3d-caduceus-stage.active .caduceus-energy-ring.ring-2 {
-    transform: scale(1) rotate(0deg);
-}
-
-.guest-3d-caduceus-stage.active .caduceus-emblem-wrapper {
-    opacity: 0.65;
-    transform: perspective(1000px) scale(1) rotateY(0deg) rotateX(0deg) translateY(0);
 }
 
 .guest-3d-cards-grid {
