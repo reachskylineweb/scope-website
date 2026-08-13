@@ -2602,12 +2602,16 @@ button, input, select, textarea {
     }
 
     .header-actions .btn-primary {
+        display: none !important; /* Removed from top bar as requested */
+    }
+
+    .nav-register-btn {
         display: inline-flex !important;
-        width: auto !important;
-        font-size: 0.72rem !important;
-        padding: 0.45rem 0.85rem !important;
+        margin-top: 1rem !important;
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.75rem !important;
         border-radius: 50px !important;
-        white-space: nowrap !important;
+        box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6) !important;
     }
 
     /* Global Mobile Typography & Word Wrapping */
@@ -2629,18 +2633,19 @@ button, input, select, textarea {
         font-size: 0.9rem !important;
     }
 
-    /* Hero Section Mobile (Matching rkhospitality.in Framed Banner Layout) */
+    /* Hero Section Mobile (Clear, Widescreen Video - Not Fully Zoomed) */
     .hero-section {
         position: relative !important;
-        min-height: 380px !important;
-        height: 55vh !important;
-        max-height: 480px !important;
+        min-height: 320px !important;
+        height: 48vh !important;
+        max-height: 400px !important;
         margin-top: var(--header-height) !important;
-        padding: 2rem 1rem !important;
+        padding: 1.5rem 1rem !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         overflow: hidden !important;
+        background: #05020a !important;
         border-bottom: 3px solid #ffb300 !important;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
     }
@@ -2651,6 +2656,7 @@ button, input, select, textarea {
         width: 100% !important;
         height: 100% !important;
         overflow: hidden !important;
+        background: #05020a !important;
     }
 
     .hero-bg-video {
@@ -2660,10 +2666,10 @@ button, input, select, textarea {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: center center !important;
+        object-position: center 35% !important; /* Perfect framing without extreme zoom */
         transform: translate(-50%, -50%) scale(1.0) !important;
-        filter: brightness(1.05) contrast(1.1) !important;
-        opacity: 1 !important;
+        filter: brightness(1.12) contrast(1.08) !important;
+        opacity: 0.92 !important;
     }
 
     .hero-video-overlay {
