@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About National Endoscopy Conference 2026 - About Event Section, Our Doctors Section, and Guest Doctors Section featuring world-renowned gastroenterology leaders.">
+    <title>About the Event | National Endoscopy Conference 2026</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. ECG LOADER -->
+    <div id="ecg-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-logo-icon">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                        <path d="M19 10.5V6.75C19 4.127 16.873 2 14.25 2H9.75C7.127 2 5 4.127 5 6.75V17.25C5 19.873 7.127 22 9.75 22H14.25C16.873 22 19 19.873 19 17.25V13.5M12 7V17M7 12H17" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="loader-logo-text">APOLLO INSTITUTE</div>
+            </div>
+            <div class="loader-event-title" data-config="eventName">NATIONAL ENDOSCOPY CONFERENCE 2026</div>
+            
+            <div class="ecg-monitor-box">
+                <svg class="ecg-svg" viewBox="0 0 500 100" preserveAspectRatio="none">
+                    <path class="ecg-path" d="M0,50 L120,50 L135,20 L150,80 L165,10 L185,90 L200,45 L215,55 L225,50 L350,50 L365,20 L380,80 L395,10 L415,90 L430,45 L445,55 L455,50 L500,50" />
+                </svg>
+            </div>
+            
+            <div class="loader-stats">
+                <div class="loader-percentage" id="loader-percentage">0%</div>
+                <div class="loader-status-text">LOADING ABOUT PAGE...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+                </div>
+                <div class="brand-info">
+                    <span class="brand-name">ENDOSCOPY 2026</span>
+                    <span class="brand-tag" data-config="hospitalName">APOLLO PREMIER HOSPITAL</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary open-register-modal">
+                    REGISTER NOW
+                </button>
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. PAGE HERO BANNER WITH 3D CLOUDINARY BACKGROUND VIDEO -->
+    <section class="hero-section" style="min-height: 60vh; padding-top: calc(var(--header-height) + 3rem); padding-bottom: 4rem;">
+        <!-- Background Video Wrapper -->
+        <div class="hero-video-wrapper">
+            <iframe 
+                src="https://player.cloudinary.com/embed/?cloud_name=dlttxqrod&public_id=Convert_image_to_3D_video_202608131256_jruafr&autoplay=true&loop=true&muted=true&controls=false" 
+                class="hero-bg-video"
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                frameborder="0"
+                title="About Page 3D Background Video">
+            </iframe>
+            <div class="hero-video-overlay"></div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 3; text-align: center;">
+            <div class="hero-content">
+                <div class="badge badge-pulse">
+                    <span>ABOUT THE CONFERENCE</span>
+                </div>
+                <h1 class="hero-title" style="font-size: 3.5rem; margin-top: 1rem;">Empowering Clinical & Surgical Mastery</h1>
+                <p class="hero-subtitle" style="max-width: 750px; margin: 1rem auto 0 auto;">Discover the core event vision, meet our host clinical chairs, and explore our distinguished international guest faculty.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 1: ABOUT EVENT SECTION (3D Quantum Bio-Pulse Stage)
+         ========================================================================== -->
+    <section id="about-event" class="section section-surface" style="position: relative; overflow: hidden; padding: 6rem 0;">
+        <!-- Ambient Luminous Particle Glow -->
+        <div class="bio-stage-glow"></div>
+
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="section-header" data-gsap="fade-up">
+                <div class="badge badge-pulse">SECTION 01 • OVERVIEW</div>
+                <h2 class="section-title">About the Event</h2>
+                <p class="section-subtitle">Empowering clinical mastery through live surgical innovation, AI diagnostics, and global collaboration.</p>
+            </div>
+
+            <!-- 3D Asymmetric Quantum Stage -->
+            <div class="quantum-stage-layout">
+                <!-- Left: Master 3D Hero Glass Stage Card -->
+                <div class="quantum-hero-card" data-gsap="fade-right">
+                    <div class="quantum-card-badge">
+                        <span class="pulse-dot"></span>
+                        <span>OCTOBER 14-16, 2026 • APOLLO HOSPITAL</span>
+                    </div>
+
+                    <h3 class="quantum-hero-title">Pioneering Modern Gastrointestinal Endoscopy</h3>
+                    
+                    <p class="quantum-hero-desc">
+                        The National Endoscopy Conference 2026 represents the flagship surgical summit for interventional gastroenterology in South Asia. Uniting 50+ international visiting professors and clinical directors, the 3-day event features unedited 4K live procedure transmissions, computer-assisted AI mucosal screening, and hands-on tactile simulation laboratories.
+                    </p>
+
+                    <div class="quantum-impact-grid">
+                        <div class="quantum-impact-node">
+                            <span class="impact-num">18+</span>
+                            <span class="impact-label">Live Surgeries</span>
+                        </div>
+                        <div class="quantum-impact-node">
+                            <span class="impact-num">50+</span>
+                            <span class="impact-label">Global Faculty</span>
+                        </div>
+                        <div class="quantum-impact-node">
+                            <span class="impact-num">1,200+</span>
+                            <span class="impact-label">Delegates</span>
+                        </div>
+                        <div class="quantum-impact-node">
+                            <span class="impact-num">24</span>
+                            <span class="impact-label">CME Credits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: 4 Luminous 3D Glass Bento Feature Cards -->
+                <div class="quantum-bento-grid">
+                    <!-- Feature Card 1 -->
+                    <div class="quantum-bento-card" data-gsap="flip-card">
+                        <div class="bento-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                        </div>
+                        <h4 class="bento-title">Unedited 4K Live Surgeries</h4>
+                        <p class="bento-desc">Real-time dual-angle HD transmission from Apollo Operating Suites with direct surgeon audio Q&A.</p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="quantum-bento-card" data-gsap="flip-card">
+                        <div class="bento-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
+                        </div>
+                        <h4 class="bento-title">AI CADe Mucosal Screening</h4>
+                        <p class="bento-desc">Hands-on experience with computer-assisted diagnostic algorithms for automated early lesion detection.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="quantum-bento-card" data-gsap="flip-card">
+                        <div class="bento-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/></svg>
+                        </div>
+                        <h4 class="bento-title">Tactile VR Simulation Labs</h4>
+                        <p class="bento-desc">Haptic feedback tissue models for ESD knife control, POEM tunneling, and hemoclip placement.</p>
+                    </div>
+
+                    <!-- Feature Card 4 -->
+                    <div class="quantum-bento-card" data-gsap="flip-card">
+                        <div class="bento-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        </div>
+                        <h4 class="bento-title">International CME Accreditation</h4>
+                        <p class="bento-desc">Certified continuing medical education credits by State Medical Council & European Accreditation Boards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2: OUR DOCTORS SECTION (3D Isometric Card Grid Layout)
+         ========================================================================== -->
+    <section id="our-doctors" class="section section-dark">
+        <div class="container">
+            <div class="section-header" data-gsap="fade-up">
+                <div class="badge">SECTION 02 • CLINICAL LEADERSHIP</div>
+                <h2 class="section-title">Our Doctors & Organizing Chairs</h2>
+                <p class="section-subtitle">Experience our 3D spinning wheel carousel of senior gastroenterology chairs and surgical directors.</p>
+            </div>
+
+            <!-- 3D SPINNING WHEEL CAROUSEL STAGE -->
+            <div class="doctors-wheel-wrapper" data-gsap="fade-up">
+                <div class="wheel-3d-stage">
+                    <div id="wheel-3d-ring" class="wheel-3d-ring">
+                        <!-- Doctor Wheel Card 0 -->
+                        <div class="doctor-wheel-card active" data-index="0">
+                            <div class="doctor-avatar-3d">
+                                <div class="doctor-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <span class="doctor-badge-tag">ORGANIZING CHAIR</span>
+                            <h3 class="doctor-name">Dr. Rajesh V. Sharma</h3>
+                            <div class="doctor-role">Director & Senior Consultant</div>
+                            <div class="doctor-institution">Department of Digestive Sciences, Apollo Hospital</div>
+                            <div class="doctor-session-chip">Specialty: Advanced EMR, ESD & POEM</div>
+                        </div>
+
+                        <!-- Doctor Wheel Card 1 -->
+                        <div class="doctor-wheel-card" data-index="1">
+                            <div class="doctor-avatar-3d">
+                                <div class="doctor-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <span class="doctor-badge-tag">SURGICAL CO-CHAIR</span>
+                            <h3 class="doctor-name">Dr. Sunita K. Menon</h3>
+                            <div class="doctor-role">Professor of Surgical Gastroenterology</div>
+                            <div class="doctor-institution">Institute of Advanced Endosurgery, Apollo Campus</div>
+                            <div class="doctor-session-chip">Specialty: Minimally Invasive Laparo-Endoscopy</div>
+                        </div>
+
+                        <!-- Doctor Wheel Card 2 -->
+                        <div class="doctor-wheel-card" data-index="2">
+                            <div class="doctor-avatar-3d">
+                                <div class="doctor-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <span class="doctor-badge-tag">EUS PROGRAM DIRECTOR</span>
+                            <h3 class="doctor-name">Dr. Alexander Thorne</h3>
+                            <div class="doctor-role">Head of Interventional Endosonography</div>
+                            <div class="doctor-institution">Apollo Gastro & Pancreatic Center</div>
+                            <div class="doctor-session-chip">Specialty: Diagnostic & Therapeutic EUS</div>
+                        </div>
+
+                        <!-- Doctor Wheel Card 3 -->
+                        <div class="doctor-wheel-card" data-index="3">
+                            <div class="doctor-avatar-3d">
+                                <div class="doctor-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <span class="doctor-badge-tag">HEPATOLOGY CHAIR</span>
+                            <h3 class="doctor-name">Dr. Meera P. Patel</h3>
+                            <div class="doctor-role">Consultant Hepatologist & ERCP Specialist</div>
+                            <div class="doctor-institution">Apollo Academic Medical Center</div>
+                            <div class="doctor-session-chip">Specialty: Complex ERCP & Cholangioscopy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wheel Indicators / Dots -->
+                <div class="wheel-indicators">
+                    <button class="wheel-dot active" data-spin-to="0">01 Dr. Sharma</button>
+                    <button class="wheel-dot" data-spin-to="1">02 Dr. Menon</button>
+                    <button class="wheel-dot" data-spin-to="2">03 Dr. Thorne</button>
+                    <button class="wheel-dot" data-spin-to="3">04 Dr. Patel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 3: GUEST DOCTORS SECTION (Cards with 3D Video Backgrounds)
+         ========================================================================== -->
+    <section id="guest-doctors" class="section section-dark" style="position: relative; padding: 6rem 0;">
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="section-header" data-gsap="fade-up">
+                <div class="badge">SECTION 03 • INTERNATIONAL FACULTY</div>
+                <h2 class="section-title">Guest Doctors & Keynote Faculty</h2>
+                <p class="section-subtitle">Renowned international pioneers and visiting professors conducting keynote lectures and live surgical sessions.</p>
+            </div>
+
+            <!-- 3D Card Grid Container with Cloudinary 3D Video Background -->
+            <div class="guest-cards-video-container">
+                <!-- Cloudinary 3D Video Background for the whole cards section alone -->
+                <div class="cards-video-bg-wrapper">
+                    <iframe 
+                        src="https://player.cloudinary.com/embed/?cloud_name=dlttxqrod&public_id=this_video_i_need_in_202608131250_cbd40y&autoplay=true&loop=true&muted=true&controls=false" 
+                        class="cards-bg-video"
+                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                        frameborder="0"
+                        title="Guest Doctors 3D Video Background">
+                    </iframe>
+                    <div class="cards-video-overlay"></div>
+                </div>
+
+                <div class="guest-3d-cards-grid">
+                    <!-- Guest Doctor 1 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">TOKYO, JAPAN</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Prof. Dr. Hiroshi Tanaka</h3>
+                                <div class="guest-title">Director, International Endoscopy Center</div>
+                                <div class="guest-hospital">Tokyo University Medical Center</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Third-Space Endoscopy & ESD Innovations</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 2 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">BALTIMORE, USA</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Dr. Elizabeth Vance</h3>
+                                <div class="guest-title">Chief of Digestive AI Research</div>
+                                <div class="guest-hospital">Johns Hopkins Medicine, USA</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">AI-Assisted Lesion Detection & CADe Screening</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 3 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">PARIS, FRANCE</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Dr. Jean-Luc Dubois</h3>
+                                <div class="guest-title">Professor of Endosurgery</div>
+                                <div class="guest-hospital">European Institute of Digestive Oncology</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Endoscopic Bariatric & Metabolic Interventions</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 4 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">NEW DELHI, INDIA</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Dr. Ananya Roy</h3>
+                                <div class="guest-title">Head of GI Endoscopy Division</div>
+                                <div class="guest-hospital">All India Institute of Medical Sciences (AIIMS)</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Difficult ERCP Cannulation & Cholangioscopy</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 5 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">LONDON, UK</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Prof. Dr. Marcus Sterling</h3>
+                                <div class="guest-title">Consultant Endoscopist & Clinical Lead</div>
+                                <div class="guest-hospital">St. Mark's Hospital & Imperial College London</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Advanced EUS-Guided Vascular Interventions</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 6 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">MADRID, SPAIN</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Dr. Sophia Rodriguez</h3>
+                                <div class="guest-title">Head of Interventional Gastroenterology</div>
+                                <div class="guest-hospital">Hospital Universitario La Paz, Madrid</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Endoscopic Treatment of Early Esophageal Neoplasms</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 7 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">SHANGHAI, CHINA</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Dr. Chen Wei-Zhang</h3>
+                                <div class="guest-title">Director of Digestive Diseases</div>
+                                <div class="guest-hospital">Fudan University Shanghai Cancer Center</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Novel POEM Techniques for Achalasia Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Doctor 8 -->
+                    <div class="guest-3d-card" data-gsap="flip-card">
+                        <div class="guest-card-header">
+                            <span class="guest-flag-badge">MUNICH, GERMANY</span>
+                        </div>
+                        <div class="guest-avatar-wrapper">
+                            <div class="guest-avatar-box">
+                                <div class="guest-avatar-inner">
+                                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                            </div>
+                            <div class="guest-info-box">
+                                <h3 class="guest-name">Prof. Dr. Hans Weber</h3>
+                                <div class="guest-title">Chair of Hepatobiliary Endoscopy</div>
+                                <div class="guest-hospital">Ludwig Maximilian University of Munich</div>
+                            </div>
+                        </div>
+                        <div class="guest-keynote-box">
+                            <div class="guest-keynote-label">KEYNOTE LECTURE</div>
+                            <div class="guest-keynote-topic">Single-Operator Cholangioscopy in Biliary Strictures</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3.5rem;">
+                <button class="btn btn-primary open-register-modal">
+                    REGISTER TO ATTEND GUEST LECTURES
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand-logo">
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+                        </div>
+                        <div class="brand-info">
+                            <span class="brand-name">ENDOSCOPY 2026</span>
+                            <span class="brand-tag" data-config="hospitalName">APOLLO PREMIER HOSPITAL</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">International Medical Conference focusing on advances in endoscopic technologies, live surgical demonstrations, and clinical education.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About Event</a>
+                        <a href="gallery.html" class="footer-link">Gallery</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Event Contact</h4>
+                    <div class="footer-links">
+                        <span class="footer-link" data-config="phone">+91 98765 43210</span>
+                        <span class="footer-link" data-config="email">secretariat@endoscopy2026.org</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Registration</h4>
+                    <button class="btn btn-primary open-register-modal" style="width: 100%;">REGISTER NOW</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 <span data-config="hospitalName">Apollo Premier Hospital</span>. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-actions">
+        <a href="#" class="float-btn float-whatsapp" data-config="whatsapp" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg></a>
+        <a href="#" class="float-btn float-call" data-config="phone" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.44 2.33.68 3.58.68a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.68 3.58a1 1 0 01-.27 1.11l-2.2 2.2z"/></svg></a>
+    </div>
+
+    <!-- MODAL -->
+    <div id="registration-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Register for Endoscopy 2026</h2>
+                <p class="modal-subtitle">Reserve your delegate seat and workshop access.</p>
+            </div>
+            <form id="registration-form" class="registration-form">
+                <div class="form-group"><label class="form-label">Full Name <span>*</span></label><input type="text" id="reg-fullname" class="form-input"><span class="error-text"></span></div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">Email <span>*</span></label><input type="email" id="reg-email" class="form-input"><span class="error-text"></span></div>
+                    <div class="form-group"><label class="form-label">Phone <span>*</span></label><input type="tel" id="reg-phone" class="form-input"><span class="error-text"></span></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">Hospital <span>*</span></label><input type="text" id="reg-hospital" class="form-input"><span class="error-text"></span></div>
+                    <div class="form-group"><label class="form-label">Designation <span>*</span></label><input type="text" id="reg-designation" class="form-input"><span class="error-text"></span></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Specialty <span>*</span></label>
+                        <select id="reg-category" class="form-select">
+                            <option value="">Select Specialty</option>
+                            <option value="Gastroenterologist">Gastroenterologist</option>
+                            <option value="Surgeon">Surgeon</option>
+                            <option value="Physician">Physician</option>
+                            <option value="Endoscopy Technician">Endoscopy Technician</option>
+                            <option value="Nurse">Nurse</option>
+                            <option value="Medical Student">Medical Student</option>
+                        </select>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group"><label class="form-label">City <span>*</span></label><input type="text" id="reg-city" class="form-input"><span class="error-text"></span></div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Workshop <span>*</span></label>
+                    <select id="reg-workshop" class="form-select">
+                        <option value="">Select Workshop</option>
+                        <option value="Live Demonstration">Live Demonstration</option>
+                        <option value="Hands-on Workshop">Hands-on Workshop</option>
+                    </select>
+                    <span class="error-text"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT REGISTRATION</button>
+            </form>
+            <div id="modal-success-state" class="modal-success-state">
+                <div class="success-icon-box"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <h3 style="color:#fff;">Registration Submitted</h3>
+                <p style="color:var(--text-secondary);">Confirmation ticket: <strong id="ticket-number">END2026-000000</strong></p>
+                <button onclick="closeRegistrationModal()" class="btn btn-secondary" style="margin-top:1rem;">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>

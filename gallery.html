@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="National Endoscopy Conference 2026 Gallery - Explore photos from previous events, live demonstrations, hands-on workshops, faculty symposia, and hospital facilities.">
+    <title>Event Gallery | National Endoscopy Conference 2026</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. ECG LOADER -->
+    <div id="ecg-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-logo-icon">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                        <path d="M19 10.5V6.75C19 4.127 16.873 2 14.25 2H9.75C7.127 2 5 4.127 5 6.75V17.25C5 19.873 7.127 22 9.75 22H14.25C16.873 22 19 19.873 19 17.25V13.5M12 7V17M7 12H17" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="loader-logo-text">APOLLO INSTITUTE</div>
+            </div>
+            <div class="loader-event-title" data-config="eventName">NATIONAL ENDOSCOPY CONFERENCE 2026</div>
+            
+            <div class="ecg-monitor-box">
+                <svg class="ecg-svg" viewBox="0 0 500 100" preserveAspectRatio="none">
+                    <path class="ecg-path" d="M0,50 L120,50 L135,20 L150,80 L165,10 L185,90 L200,45 L215,55 L225,50 L350,50 L365,20 L380,80 L395,10 L415,90 L430,45 L445,55 L455,50 L500,50" />
+                </svg>
+            </div>
+            
+            <div class="loader-stats">
+                <div class="loader-percentage" id="loader-percentage">0%</div>
+                <div class="loader-status-text">LOADING GALLERY...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+                </div>
+                <div class="brand-info">
+                    <span class="brand-name">ENDOSCOPY 2026</span>
+                    <span class="brand-tag" data-config="hospitalName">APOLLO PREMIER HOSPITAL</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary open-register-modal">
+                    REGISTER NOW
+                </button>
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. PAGE HERO BANNER WITH 3D CINEMATIC BACKGROUND VIDEO -->
+    <section class="hero-section" style="min-height: 55vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: var(--header-height);">
+        <!-- Embedded Cloudinary 3D Background Video -->
+        <div class="hero-video-wrapper">
+            <iframe 
+                src="https://player.cloudinary.com/embed/?cloud_name=dlttxqrod&public_id=Creating_3D_cinematic_video_1080p_202608131515_owvvbw&autoplay=true&loop=true&muted=true&controls=false" 
+                class="hero-bg-video"
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                frameborder="0"
+                title="Gallery 3D Cinematic Background Video">
+            </iframe>
+            <div class="hero-video-overlay"></div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 3; text-align: center;">
+            <div class="badge badge-pulse">CONFERENCE GALLERY</div>
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-top: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.9);">Moments of Medical Innovation</h1>
+            <p class="hero-subtitle" style="max-width: 650px; margin: 1rem auto 0 auto; color: #e2e8f0; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Browse through highlights of live surgical broadcasts, hands-on simulator workshops, faculty sessions, and clinical exhibitions.</p>
+        </div>
+    </section>
+
+    <!-- 4. GALLERY & FILTER SECTION -->
+    <section class="section section-surface">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="gallery-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="demos">Live Demonstrations</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="faculty">Faculty & Speakers</button>
+                <button class="filter-btn" data-filter="hospital">Hospital & Tech</button>
+                <button class="filter-btn" data-filter="moments">Event Moments</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-card" data-category="demos">
+                    <svg class="svg-thumb" viewBox="0 0 400 300" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#051937" />
+                                <stop offset="100%" stop-color="#004d7a" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#g1)"/>
+                        <circle cx="200" cy="130" r="60" fill="none" stroke="#00d2ff" stroke-width="3" opacity="0.6"/>
+                        <circle cx="200" cy="130" r="30" fill="none" stroke="#00e676" stroke-width="2"/>
+                        <path d="M120 220 H280 M150 240 H250" stroke="#0b6bcb" stroke-width="4" stroke-linecap="round"/>
+                        <text x="200" y="270" text-anchor="middle" fill="#00d2ff" font-family="sans-serif" font-size="14" font-weight="bold">LIVE DEMO OPERATING THEATRE</text>
+                    </svg>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Live Demonstrations</span>
+                        <h3 class="gallery-title">Live EMR & ESD Procedure Transmission</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-card" data-category="workshops">
+                    <svg class="svg-thumb" viewBox="0 0 400 300" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0b1e36" />
+                                <stop offset="100%" stop-color="#006994" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#g2)"/>
+                        <rect x="100" y="70" width="200" height="130" rx="12" fill="none" stroke="#00d2ff" stroke-width="2"/>
+                        <path d="M140 120 L180 160 L260 90" fill="none" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+                        <text x="200" y="250" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">SIMULATOR TRAINING LAB</text>
+                    </svg>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Workshops</span>
+                        <h3 class="gallery-title">Hands-on Mechanical Tissue Simulator Lab</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-card" data-category="faculty">
+                    <svg class="svg-thumb" viewBox="0 0 400 300" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#081426" />
+                                <stop offset="100%" stop-color="#11365d" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#g3)"/>
+                        <circle cx="200" cy="110" r="45" fill="#00d2ff" opacity="0.3"/>
+                        <path d="M130 220 Q200 160 270 220" fill="none" stroke="#00d2ff" stroke-width="3"/>
+                        <text x="200" y="260" text-anchor="middle" fill="#00e5ff" font-family="sans-serif" font-size="14" font-weight="bold">KEYNOTE LECTURE</text>
+                    </svg>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Faculty & Speakers</span>
+                        <h3 class="gallery-title">Keynote Address on Third-Space Endoscopy</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-card" data-category="hospital">
+                    <svg class="svg-thumb" viewBox="0 0 400 300" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#020d1a" />
+                                <stop offset="100%" stop-color="#093859" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#g4)"/>
+                        <path d="M80 230 V100 L200 50 L320 100 V230 Z" fill="none" stroke="#00d2ff" stroke-width="2"/>
+                        <line x1="200" y1="50" x2="200" y2="230" stroke="#00e676" stroke-width="2"/>
+                        <text x="200" y="265" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">APOLLO ENDOSCOPY WING</text>
+                    </svg>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Hospital & Tech</span>
+                        <h3 class="gallery-title">State-of-the-Art Digital Endoscopy Suite</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-card" data-category="moments">
+                    <svg class="svg-thumb" viewBox="0 0 400 300" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0a1d33" />
+                                <stop offset="100%" stop-color="#005073" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#g5)"/>
+                        <circle cx="120" cy="120" r="25" fill="#00d2ff" opacity="0.4"/>
+                        <circle cx="200" cy="110" r="30" fill="#00e676" opacity="0.4"/>
+                        <circle cx="280" cy="120" r="25" fill="#00d2ff" opacity="0.4"/>
+                        <text x="200" y="250" text-anchor="middle" fill="#00d2ff" font-family="sans-serif" font-size="14" font-weight="bold">DELEGATE RECEPTION</text>
+                    </svg>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Event Moments</span>
+                        <h3 class="gallery-title">Inaugural Networking & Delegate Welcome</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-card" data-category="demos">
+                    <svg class="svg-thumb" viewBox="0 0 400 300" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#061224" />
+                                <stop offset="100%" stop-color="#05456b" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="300" fill="url(#g6)"/>
+                        <path d="M50 150 C150 50 250 250 350 150" fill="none" stroke="#00e5ff" stroke-width="4"/>
+                        <circle cx="200" cy="150" r="10" fill="#00e676"/>
+                        <text x="200" y="255" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">AI MAPPING SCREEN</text>
+                    </svg>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Live Demonstrations</span>
+                        <h3 class="gallery-title">Real-Time AI Lesion Detection Demonstration</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="modal-close-btn" aria-label="Close Lightbox">&times;</button>
+            <button id="lightbox-prev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous Photo">&#10094;</button>
+            <button id="lightbox-next" class="lightbox-nav-btn lightbox-next" aria-label="Next Photo">&#10095;</button>
+            
+            <div id="lightbox-img-wrapper" class="lightbox-img-wrapper">
+                <!-- SVG / Image Content dynamically injected here -->
+            </div>
+            
+            <div class="lightbox-caption">
+                <span id="lightbox-category" class="gallery-category">Category</span>
+                <h3 id="lightbox-title" class="gallery-title">Photo Title</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand-logo">
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+                        </div>
+                        <div class="brand-info">
+                            <span class="brand-name">ENDOSCOPY 2026</span>
+                            <span class="brand-tag" data-config="hospitalName">APOLLO PREMIER HOSPITAL</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">International Medical Conference focusing on advances in endoscopic technologies and clinical education.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About Event</a>
+                        <a href="gallery.html" class="footer-link">Gallery</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Event Contact</h4>
+                    <div class="footer-links">
+                        <span class="footer-link" data-config="phone">+91 98765 43210</span>
+                        <span class="footer-link" data-config="email">secretariat@endoscopy2026.org</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Registration</h4>
+                    <button class="btn btn-primary open-register-modal" style="width: 100%;">REGISTER NOW</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 <span data-config="hospitalName">Apollo Premier Hospital</span>. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-actions">
+        <a href="#" class="float-btn float-whatsapp" data-config="whatsapp" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg></a>
+        <a href="#" class="float-btn float-call" data-config="phone" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.44 2.33.68 3.58.68a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.68 3.58a1 1 0 01-.27 1.11l-2.2 2.2z"/></svg></a>
+    </div>
+
+    <!-- MODAL -->
+    <div id="registration-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Register for Endoscopy 2026</h2>
+                <p class="modal-subtitle">Reserve your delegate seat and workshop access.</p>
+            </div>
+            <form id="registration-form" class="registration-form">
+                <div class="form-group"><label class="form-label">Full Name <span>*</span></label><input type="text" id="reg-fullname" class="form-input"><span class="error-text"></span></div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">Email <span>*</span></label><input type="email" id="reg-email" class="form-input"><span class="error-text"></span></div>
+                    <div class="form-group"><label class="form-label">Phone <span>*</span></label><input type="tel" id="reg-phone" class="form-input"><span class="error-text"></span></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">Hospital <span>*</span></label><input type="text" id="reg-hospital" class="form-input"><span class="error-text"></span></div>
+                    <div class="form-group"><label class="form-label">Designation <span>*</span></label><input type="text" id="reg-designation" class="form-input"><span class="error-text"></span></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Specialty <span>*</span></label>
+                        <select id="reg-category" class="form-select">
+                            <option value="">Select Specialty</option>
+                            <option value="Gastroenterologist">Gastroenterologist</option>
+                            <option value="Surgeon">Surgeon</option>
+                            <option value="Physician">Physician</option>
+                            <option value="Endoscopy Technician">Endoscopy Technician</option>
+                            <option value="Nurse">Nurse</option>
+                            <option value="Medical Student">Medical Student</option>
+                        </select>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="form-group"><label class="form-label">City <span>*</span></label><input type="text" id="reg-city" class="form-input"><span class="error-text"></span></div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Workshop <span>*</span></label>
+                    <select id="reg-workshop" class="form-select">
+                        <option value="">Select Workshop</option>
+                        <option value="Live Demonstration">Live Demonstration</option>
+                        <option value="Hands-on Workshop">Hands-on Workshop</option>
+                    </select>
+                    <span class="error-text"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT REGISTRATION</button>
+            </form>
+            <div id="modal-success-state" class="modal-success-state">
+                <div class="success-icon-box"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <h3 style="color:#fff;">Registration Submitted</h3>
+                <p style="color:var(--text-secondary);">Confirmation ticket: <strong id="ticket-number">END2026-000000</strong></p>
+                <button onclick="closeRegistrationModal()" class="btn btn-secondary" style="margin-top:1rem;">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>
