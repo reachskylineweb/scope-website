@@ -182,16 +182,15 @@ function initGalleryLightbox() {
     function updateLightboxContent() {
         if (!visibleItems[currentIndex]) return;
         const currentItem = visibleItems[currentIndex];
-        const title = currentItem.querySelector('.gallery-title')?.textContent || 'Event Photo';
-        const category = currentItem.querySelector('.gallery-category')?.textContent || 'Gallery';
         const img = currentItem.querySelector('.gallery-img');
         const svgContent = currentItem.querySelector('.svg-thumb')?.outerHTML;
 
-        lightboxTitle.textContent = title;
-        lightboxCategory.textContent = category;
+        // Hide text caption box in Lightbox modal
+        if (lightboxTitle) lightboxTitle.style.display = 'none';
+        if (lightboxCategory) lightboxCategory.style.display = 'none';
 
         if (img) {
-            lightboxImgWrapper.innerHTML = `<img src="${img.src}" alt="${title}" class="lightbox-img" style="max-width: 90vw; max-height: 80vh; border-radius: 12px; border: 1px solid rgba(255,179,0,0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.8); object-fit: contain;">`;
+            lightboxImgWrapper.innerHTML = `<img src="${img.src}" alt="SCOPE 2026 Official Photo" class="lightbox-img" style="max-width: 92vw; max-height: 85vh; border-radius: 12px; border: 1.5px solid rgba(255,179,0,0.5); box-shadow: 0 20px 50px rgba(0,0,0,0.9); object-fit: contain;">`;
         } else if (svgContent) {
             lightboxImgWrapper.innerHTML = svgContent;
         }

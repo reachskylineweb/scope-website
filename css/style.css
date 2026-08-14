@@ -1676,51 +1676,48 @@ button, input, select, textarea {
     transition: all var(--transition-fast);
 }
 
-.filter-btn:hover, .filter-btn.active {
-    background: var(--primary);
-    border-color: var(--secondary);
-    color: #ffffff;
-    box-shadow: 0 4px 15px var(--primary-glow);
+/* Gallery Section - Images Alone */
+.gallery-filter-bar,
+.gallery-overlay {
+    display: none !important;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
 }
 
 .gallery-card {
-    height: 260px;
-    border-radius: var(--border-radius);
+    height: 280px;
+    border-radius: var(--border-radius-lg);
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border: 1px solid var(--border-color);
-    background-size: cover;
-    background-position: center;
-    transition: transform var(--transition-normal), border-color var(--transition-normal);
+    border: 1.5px solid rgba(255, 179, 0, 0.35);
+    background: rgba(20, 9, 36, 0.85);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--secondary);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), var(--glow-cyan);
+    transform: translateY(-8px) scale(1.02);
+    border-color: #ffb300;
+    box-shadow: 0 20px 45px rgba(255, 179, 0, 0.45);
 }
 
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 30%, rgba(5, 13, 24, 0.9) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1.5rem;
-    opacity: 0.9;
-    transition: opacity var(--transition-fast);
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.gallery-card:hover .gallery-overlay {
-    opacity: 1;
+.gallery-card:hover .gallery-img {
+    transform: scale(1.08);
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .gallery-category {
