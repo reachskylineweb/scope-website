@@ -479,6 +479,10 @@ button, input, select, textarea {
     gap: 3.25rem;
 }
 
+.nav-menu .nav-register-btn {
+    display: none;
+}
+
 .nav-link {
     font-family: var(--font-heading);
     font-size: 1.02rem;
